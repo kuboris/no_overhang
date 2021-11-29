@@ -10,15 +10,15 @@ If you do, then this tool is for you.
 Blender scripting code that rotates all object faces to be at least X amount of degrees (45 by default) from horizontal plane.
 
 ## How?
-Open object in Blender in edit mode.
-Select all the faces.(Preferably deselect faces on the bottom to avoid rotating them)
-Paste script into the scripting window 
-Alter OVERHANG_ANGLE and MIN_Z variables according to your needs.
-Run it, wait....(will be pretty slow on detailed geometries)
-Magically all the faces should be facing at least X degrees from the horizontal plane.
+1) Open object in Blender in edit mode.
+2) Select all the faces.(Preferably deselect faces on the bottom to avoid rotating them)
+3) Paste script into the scripting window.
+4) Alter OVERHANG_ANGLE and MIN_Z variables according to your needs.
+5) Run it, wait....(will be pretty slow on detailed geometries)
+6) Magically all the faces should be facing at least X degrees from the horizontal plane.
 
 ## Wait... Does that work?
-YES, at all times.... but...
+YES, almost all the time.... but...
 There are few small issues you can encounter(and hopefully fix and open a pull request)
 1) It doesn't work when the opened object is rotated in blender before running the script.(Requires fix)
 2) Rotation of the face alters faces around it little and script needs to be run multiple times.(Requires smart fix)
