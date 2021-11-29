@@ -19,8 +19,11 @@ Blender scripting code that rotates all object faces to be at least X amount of 
 6) Magically all the faces should be facing at least X degrees from the horizontal plane.
 
 ## Wait... Does that work?
-YES, almost all the time.... but...
-There are few small issues you can encounter(and hopefully fix and open a pull request)
+YES!*
+
+*Meaning it does what it's supposed to do.. that is rotating faces. However it can do pretty
+unexpecting things as it has a "few" known edgecases/bugs.
+There are few "small" issues you can encounter(and hopefully fix with a pull request)
 1) It doesn't work when the opened object is rotated in blender before running the script.(Requires fix)
 2) Rotation of the face alters faces around it little and script needs to be run multiple times.(Requires smart fix)
 3) Because rotation alters faces around it bottom faces(base) can be warped even if not selected.(Requires fix)
