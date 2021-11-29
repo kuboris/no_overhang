@@ -20,7 +20,7 @@ Magically all the faces should be facing at least X degrees from the horizontal 
 ## Wait... Does that work?
 YES, at all times.... but...
 There are few small issues you can encounter(and hopefully fix and open a pull request)
-1) It doesn't work well when the opened object is rotated in blender before running the script.(Requires fix)
+1) It doesn't work when the opened object is rotated in blender before running the script.(Requires fix)
 2) Rotation of the face alters faces around it little and script needs to be run multiple times.(Requires smart fix)
 3) Because rotation alters faces around it bottom faces(base) can be warped even if not selected.(Requires fix)
 4) Even if the face is 45degrees angle it doesn't mean it's printable as the bottom edge could still be under an angle bigger than 45 degrees.
@@ -35,4 +35,4 @@ Blue faces are overhangs that were taken care of by the script.
 
 ## Why
 This approach with much better implementation has actually pretty strong applications for decorative prints.
-Please if you know blender/3d printing better than I do add a pull request.
+Please, anyone knowing blender/3d printing could add a pull request and fix any of the bugs.
