@@ -1,9 +1,10 @@
-# Remove overhangs in any 3d print
+# Automatically remove overhangs in any 3d print
 Magic/Automatic removal of overhangs in any object.
 
-Do you hate overhangs with passion, 
-do you despise removing support structures,
-do you crave for smooth 3d texture?
+- Do you hate overhangs with passion, 
+- Do you despise removing support structures,
+- Do you crave for smooth 3d texture?
+
 If you do, then this tool is for you. 
 
 ## What is it?
