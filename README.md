@@ -9,6 +9,7 @@ If you do, then this tool is for you.
 
 ## What is it?
 Blender scripting code that rotates all object faces to be at least X amount of degrees (45 by default) from horizontal plane.
+In default configuration it just colors all the overhangs with red color.
 
 ## How?
 1) Open object in Blender in edit mode.
