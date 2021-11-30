@@ -20,6 +20,8 @@ OVERHANG_ANGLE = 45
 MIN_Z = 0
 # What angle from horizontal plane to check
 check_angle = 90 - OVERHANG_ANGLE
+# Do not rotate. Only color the faces that are overhang
+PAINT_OVERHANGS = True
 
 # Return degrees of rotation
 def angle_from_vector(vec , vec2):
@@ -27,6 +29,19 @@ def angle_from_vector(vec , vec2):
     print(vec)
     angle = vec.angle(vec2)
     return math.degrees(angle)
+
+# Will paint overhangs.
+# Implementation is ugly as it duplicates the material
+# It also requires that 'Red' material exists
+if PAINT_OVERHANGS:
+    mat = bpy.data.materials['Red']
+    mat_slots = obj.material_slots
+    #add a material slot using a material
+    obj.data.materials.append(mat)
+    #remove material from material slot
+    mat_slots[0].material = None
+    #add the material slot that will be used for individual face
+    mat_slots[1].material = mat 
 
 selected_faces = [f for f in bm.faces if f.select]
 
@@ -58,6 +73,9 @@ for f in selected_faces:
     # If its less than ~45 degrees from negative -z vector
     # try to rotate it to be at least 45 degrees from -z vector
     if normal_angle < (check_angle - 1) and z_point > MIN_Z:
+        if PAINT_OVERHANGS:
+            f.material_index = 1
+            continue
         rotate_by = check_angle - normal_angle
         ro_x = math.radians(rotate_by * x_share)
         if axis[0] < 0:
